@@ -16,7 +16,7 @@ function Hero({ pageInfo }: Props) {
             'I enjoy building apps and software that helps others',
             'This Full Stack website was built with...',
             'React, TypeScript, NextJS, Tailwind on the Front End and...',
-            'Sanity CMS for the Back End to server side render for...',
+            'Sanity CMS for the Back End for...',
             'lightening fast performance and SEO optimization!',
         ],
         loop: true,
@@ -28,7 +28,7 @@ function Hero({ pageInfo }: Props) {
         <div className='h-screen flex flex-col space-y-10 items-center justify-center text-center overflow-hidden'>
             {/* <BackgroundCircles /> */}
             <img
-                className="relative rounded-full h-[400px] w-[400px] md:h-[4500px] md:w-[500px] xl:h-[600px] xl:w-[600px] mx-auto object-cover"
+                className="relative rounded h-[400px] w-[400px] md:h-[4500px] md:w-[500px] xl:h-[550px] xl:w-[800px] mx-auto object-cover"
                 src={urlFor(pageInfo?.heroImage).url()}
                 alt=""
             />
