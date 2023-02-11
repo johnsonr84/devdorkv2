@@ -55,16 +55,22 @@ function Projects({ projects }: Props) {
                             </p>
                         </div>
                         <div className="pb-10 xs:text-center">
-                            <Link href="https://github.com/johnsonr84/react-employee-directory">
-                                <button className="heroButton">Github Repo</button>
+                            <Link key={project._id} href={project.linkToDemo}>
+                                <a target="_blank" rel="noopener noreferrer">
+                                    <button className="heroButton">Video Demo</button>
+                                </a>
                             </Link>
 
-                            <Link href="">
-                                <button className="heroButton">Deployment</button>
+                            <Link key={project._id} href={project.linkToDeployment}>
+                                <a target="_blank" rel="noopener noreferrer">
+                                    <button className="heroButton">Deployment</button>
+                                </a>
                             </Link>
 
-                            <Link href="#skills">
-                                <button className="heroButton">Video Demo</button>
+                            <Link key={project._id} href={project.linkToGithub}>
+                                <a target="_blank" rel="noopener noreferrer">
+                                    <button className="heroButton">Github Repo</button>
+                                </a>
                             </Link>
                         </div>
                     </motion.div>

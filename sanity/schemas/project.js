@@ -31,6 +31,21 @@ export default {
     {
       name: "linkToBuild",
       title: "LinkToBuild",
+      type: "string",
+    },
+    {
+      name: "linkToGithub",
+      title: "LinkToGithub",
+      type: "string",
+    },
+    {
+      name: "linkToDeployment",
+      title: "LinkToDeployment",
+      type: "url",
+    },
+    {
+      name: "linkToDemo",
+      title: "LinkToDemo",
       type: "url",
     },
   ],
