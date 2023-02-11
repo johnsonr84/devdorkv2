@@ -32,11 +32,11 @@ function ContactMe({ pageInfo }: Props) {
             transition={{ duration: 1.5 }}
             className="flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 h-screen justify-evenly mx-auto items-center"
         >
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 xs:text-lg sm:text-lg md:text-xl base:text-2xl lg:text-3xl xl:text-3xl'>
                 Contact
             </h3>
-            <div className='flex flex-col space-y-10 pt-5'>
-                <h4 className='text-4xl font-semibold text-center'>
+            <div className='flex flex-col space-y-10 pt-10 xs:text-xs sm:text-sm md:text-md base:text-lg lg:text-xl xl:text-2xl'>
+                <h4 className='xs:text-md sm:text-md md:text-lg base:text-xl lg:text-2xl xl:text-xl font-semibold text-center'>
                     I want to hear from you. {" "}
                     <span className='decoration-[#61DAFB]/50 underline'>
                         Lets talk!
@@ -45,17 +45,19 @@ function ContactMe({ pageInfo }: Props) {
                 <div className='space-y-10'>
                     <div className='flex items-center space-x-5 justify-center'>
                         <PhoneIcon className='text-[#61DAFB] h-7 w-7 animate-bounce' />
-                        <p className="text-2xl">{pageInfo.phoneNumber}</p>
+                        <p className="xs:text-xs sm:text-sm md:text-md base:text-lg lg:text-xl xl:text-2xl">
+                            {pageInfo.phoneNumber}
+                        </p>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>
                         <EnvelopeIcon className='text-[#61DAFB] h-7 w-7 animate-bounce' />
-                        <a className="text-2xl" href={`mailto:${pageInfo.email}`}>
+                        <a className="xs:text-xs sm:text-sm md:text-md base:text-lg lg:text-xl xl:text-2xl" href={`mailto:${pageInfo.email}`}>
                             {pageInfo.email}
                         </a>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>
                         <MapPinIcon className='text-[#61DAFB] h-7 w-7 animate-bounce' />
-                        <p className="text-2xl">{pageInfo.address}</p>
+                        <p className="xs:text-xs sm:text-sm md:text-md base:text-lg lg:text-xl xl:text-2xl">{pageInfo.address}</p>
                     </div>
                 </div>
 
@@ -81,7 +83,7 @@ function ContactMe({ pageInfo }: Props) {
                         {...register("subject")}
                     />
                     <textarea
-                        className="contactInput h-36"
+                        className="contactInput h-24"
                         placeholder="Message"
                         {...register("message")}
                     />
