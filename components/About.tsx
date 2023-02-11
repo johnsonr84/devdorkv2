@@ -16,7 +16,7 @@ function About({ pageInfo }: Props) {
             transition={{ duration: 1.5 }}
             className="flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 pt-20 h-screen justify-evenly mx-auto items-center"
         >
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 xs:text-lg sm:text-lg md:text-xl base:text-2xl lg:text-3xl xl:text-3xl">
                 About
             </h3>
             <motion.img
@@ -27,16 +27,16 @@ function About({ pageInfo }: Props) {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 src={urlFor(pageInfo?.profilePic).url()}
-                className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px] object-cover"
+                className="-mb-20 md:mb-0 flex-shrink-0 xs:w-42 xs:h-42 w-56 h-56 rounded-full md:rounded-lg md:w-64 md:h-96 lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] object-cover"
             ></motion.img>
 
             <div className="space-y-10 px-0 md:px-10">
-                <h4 className="pt-5 text-2xl md:text-3xl lg:text-4xl font-semibold">
+                <h4 className="pt-5 xs:text-md sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl font-semibold">
                     Thanks for being{" "}
                     <span className="decoration-[#61DAFB]/50 underline">curious</span>{" "}
                     about my life!
                 </h4>
-                <p className="text-sm md:text-md xl:text-lg">{pageInfo?.backgroundInformation}</p>
+                <p className="xs:text-xs sm:text-lg md:text-lg lg:text-xl xl:text-2xl">{pageInfo?.backgroundInformation}</p>
             </div>
         </motion.div>
     );
