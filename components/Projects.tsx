@@ -5,7 +5,7 @@ import { urlFor } from "../sanity";
 import Link from "next/link";
 
 type Props = {
-  projects: Project[];
+    projects: Project[];
 };
 
 function Projects({ projects }: Props) {
@@ -17,7 +17,7 @@ function Projects({ projects }: Props) {
             transition={{ duration: 1.5 }}
             className="flex relative overflow-hidden flex-col text-left md:flex-row max-w-full h-screen justify-evenly mx-auto items-center z-0"
         >
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 xs:text-lg sm:text-lg md:text-xl base:text-2xl lg:text-3xl xl:text-3xl">
                 Projects
             </h3>
 
@@ -37,22 +37,35 @@ function Projects({ projects }: Props) {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     src={urlFor(project?.image).url()}
-                                    className="md:mb-0 p-5 flex-shrink-0 w-70 h-70 rounded md:rounded-lg md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[500px] xl:h-[500px] object-contain cursor-pointer"
+                                    className="md:mb-0 p-5 xs:mt-20 sm:mt-20 md:mt-10 lg:mt-15 xl:mt-20 flex-shrink-0 rounded md:rounded-lg xs:w-[250px] xs:h-[250px] sm:w-[300px] sm:h-[300px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] object-contain cursor-pointer"
                                 />
                             </a>
                         </Link>
 
-                        <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                            <h4 className="text-4xl font-semibold text-center">
+                        <div className="space-y-5 px-0 md:px-10 max-w-6xl">
+                            <h4 className="xs:text-lg sm:text-xl md:text-2xl base:text-xl lg:text-2xl xl:text-2xl font-semibold text-center">
                                 <span className="decoration-[#61DAFB]/50 underline">
                                     Project {i + 1} of {projects.length}:
                                 </span>{" "}
                                 {project.title}
                             </h4>
 
-                            <p className="text-lg text-center md:text-left">
+                            <p className="xs:text-sm sm:text-md md:text-lg base:text-lg lg:text-xl xl:text-xl text-center md:text-left">
                                 {project.summary}
                             </p>
+                        </div>
+                        <div className="pb-10 xs:text-center">
+                            <Link href="https://github.com/johnsonr84/react-employee-directory">
+                                <button className="heroButton">Github Repo</button>
+                            </Link>
+
+                            <Link href="">
+                                <button className="heroButton">Deployment</button>
+                            </Link>
+
+                            <Link href="#skills">
+                                <button className="heroButton">Video Demo</button>
+                            </Link>
                         </div>
                     </motion.div>
                 ))}

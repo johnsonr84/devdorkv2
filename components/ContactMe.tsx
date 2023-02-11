@@ -36,7 +36,7 @@ function ContactMe({ pageInfo }: Props) {
                 Contact
             </h3>
             <div className='flex flex-col space-y-10 pt-10 xs:text-xs sm:text-sm md:text-md base:text-lg lg:text-xl xl:text-2xl'>
-                <h4 className='xs:text-md sm:text-md md:text-lg base:text-xl lg:text-2xl xl:text-xl font-semibold text-center'>
+                <h4 className='xs:text-lg sm:text-lg md:text-xl base:text-xl lg:text-2xl xl:text-xl font-semibold text-center'>
                     I want to hear from you. {" "}
                     <span className='decoration-[#61DAFB]/50 underline'>
                         Lets talk!
@@ -45,19 +45,19 @@ function ContactMe({ pageInfo }: Props) {
                 <div className='space-y-10'>
                     <div className='flex items-center space-x-5 justify-center'>
                         <PhoneIcon className='text-[#61DAFB] h-7 w-7 animate-bounce' />
-                        <p className="xs:text-xs sm:text-sm md:text-md base:text-lg lg:text-xl xl:text-2xl">
+                        <p className="xs:text-sm sm:text-md md:text-lg base:text-lg lg:text-xl xl:text-2xl">
                             {pageInfo.phoneNumber}
                         </p>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>
                         <EnvelopeIcon className='text-[#61DAFB] h-7 w-7 animate-bounce' />
-                        <a className="xs:text-xs sm:text-sm md:text-md base:text-lg lg:text-xl xl:text-2xl" href={`mailto:${pageInfo.email}`}>
+                        <a className="xs:text-sm sm:text-md md:text-lg base:text-lg lg:text-xl xl:text-2xl" href={`mailto:${pageInfo.email}`}>
                             {pageInfo.email}
                         </a>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>
                         <MapPinIcon className='text-[#61DAFB] h-7 w-7 animate-bounce' />
-                        <p className="xs:text-xs sm:text-sm md:text-md base:text-lg lg:text-xl xl:text-2xl">{pageInfo.address}</p>
+                        <p className="xs:text-sm sm:text-md md:text-lg base:text-lg lg:text-xl xl:text-2xl">{pageInfo.address}</p>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@ function ContactMe({ pageInfo }: Props) {
                         {...register("message")}
                     />
 
-                    <button className='bg-[#61DAFB] py-5 px-10 rounded-md text-black font-bold' typeof='submit'>Submit</button>
+                    <button className='bg-[#61DAFB] py-5 px-10 rounded-md text-[#646464] font-bold' typeof='submit'>Submit</button>
                 </form>
             </div>
         </motion.div>

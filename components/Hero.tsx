@@ -41,7 +41,7 @@ function Hero({ pageInfo }: Props) {
           <Cursor cursorColor="#61DAFB" />
         </h1>
 
-        <div className="pb-10">
+        <div className="pb-10 xs:text-center">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
