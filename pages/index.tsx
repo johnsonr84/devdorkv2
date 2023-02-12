@@ -6,11 +6,11 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
-import School from "../components/School";
+// import School from "../components/School";
 import { Experience, PageInfo, Project, Skill, Social, Education } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchExperiences } from "../utils/fetchExperiences";
-import { fetchEducations } from "../utils/fetchEducations";
+// import { fetchEducations } from "../utils/fetchEducations";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocial } from "../utils/fetchSocials";
@@ -26,7 +26,7 @@ type Props = {
   educations: Education[];
 };
 
-const Home = ({ projects, skills, pageInfo, experiences, socials, educations }: Props) => {
+const Home = ({ projects, skills, pageInfo, experiences, socials }: Props) => {
   return (
     <div className='bg-white text-gray-500 h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#61DAFB]/80'>
 
@@ -52,9 +52,9 @@ const Home = ({ projects, skills, pageInfo, experiences, socials, educations }: 
         <Projects projects={projects} />
       </section>
 
-      <section id="projects" className='snap-start'>
+      {/* <section id="education" className='snap-start'>
         <School educations={educations} />
-      </section>
+      </section> */}
 
       <section id="contact" className='snap-start'>
         <ContactMe pageInfo={pageInfo} />
@@ -78,10 +78,10 @@ export default Home;
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
+  // const educations: Education[] = await fetchEducations();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocial();
-  const educations: Education[] = await fetchEducations();
 
   return {
     props: {
@@ -90,7 +90,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       projects,
       socials,
-      educations,
+      // educations
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
