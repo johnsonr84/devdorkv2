@@ -4,6 +4,7 @@ import { Project } from "../typings";
 import { urlFor } from "../sanity";
 import Link from "next/link";
 
+
 type Props = {
     projects: Project[];
 };
