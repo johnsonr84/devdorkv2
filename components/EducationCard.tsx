@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Education } from "../typings";
 import { urlFor } from "../sanity";
 
+
 type Props = {
   education: Education;
 };
