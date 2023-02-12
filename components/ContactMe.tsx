@@ -88,7 +88,7 @@ function ContactMe({ pageInfo }: Props) {
                         {...register("message")}
                     />
 
-                    <button className='bg-[#61DAFB] py-5 px-10 rounded-md text-[#646464] font-bold' typeof='submit'>Submit</button>
+                    <button className='bg-gray-400/80 hover:bg-gray-400 py-5 px-10 rounded-md text-[#fff] font-bold' typeof='submit'>Submit</button>
                 </form>
             </div>
         </motion.div>

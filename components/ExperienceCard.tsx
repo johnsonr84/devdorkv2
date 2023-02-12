@@ -31,7 +31,7 @@ function ExperienceCard({ experience }: Props) {
         <h4 className="xs:text-md sm:text-md md:text-lg lg:text-xl xl:text-2xl font-light">{experience.jobTitle} - {experience.company}</h4>
         <p className="font-bold text-sm md:text-2xl lg:text-lg xl:text-2xl mt-1"></p>
         <div className="flex flex-wrap my-2">
-          {experience.technologies.map((technology) => (
+          {experience.technologies?.map((technology) => (
             <img
               key={technology._id}
               className="xs:w-[20px] xs:h-[20px] sm:w-[24px] sm:h-[24px] md:w-[32px] md:h-[32px] lg:w-[40px] lg:h-[40px] rounded-full m-1"

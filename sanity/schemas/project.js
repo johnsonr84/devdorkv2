@@ -4,8 +4,8 @@ export default {
   type: "document",
   fields: [
     {
-      name: "order",
-      title: "Order",
+      name: "projectIndex",
+      title: "ProjectIndex",
       type: "number",
       hidden: true,
     },
