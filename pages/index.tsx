@@ -6,9 +6,11 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
-import { Experience, PageInfo, Project, Skill, Social } from "../typings";
+import School from "../components/School";
+import { Experience, PageInfo, Project, Skill, Social, Education } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchExperiences } from "../utils/fetchExperiences";
+import { fetchEducations } from "../utils/fetchEducations";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocial } from "../utils/fetchSocials";
@@ -21,9 +23,10 @@ type Props = {
   skills: Skill[];
   projects: Project[];
   socials: Social[];
+  educations: Education[];
 };
 
-const Home = ({ projects, skills, pageInfo, experiences, socials }: Props) => {
+const Home = ({ projects, skills, pageInfo, experiences, socials, educations }: Props) => {
   return (
     <div className='bg-white text-gray-500 h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#61DAFB]/80'>
 
@@ -47,6 +50,10 @@ const Home = ({ projects, skills, pageInfo, experiences, socials }: Props) => {
 
       <section id="projects" className='snap-start'>
         <Projects projects={projects} />
+      </section>
+
+      <section id="projects" className='snap-start'>
+        <School educations={educations} />
       </section>
 
       <section id="contact" className='snap-start'>
@@ -74,6 +81,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocial();
+  const educations: Education[] = await fetchEducations();
 
   return {
     props: {
@@ -82,6 +90,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       projects,
       socials,
+      educations,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in

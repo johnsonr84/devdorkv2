@@ -38,6 +38,17 @@ export interface Experience extends SanityBody {
   technologies: Technology[];
 }
 
+export interface Education extends SanityBody {
+  _type: "education";
+  school: string;
+  schoolIndex: "number";
+  degreeImage: Image;
+  dateStarted: date;
+  dateEnded: date;
+  degreeTitle: string;
+  points: string[];
+}
+
 export interface Technology extends SanityBody {
   _type: "skill";
   image: Image;
