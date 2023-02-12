@@ -4,9 +4,10 @@ export default {
   type: "document",
   fields: [
     {
-      name: "projectIndex",
-      title: "ProjectIndex",
+      name: "order",
+      title: "Order",
       type: "number",
+      hidden: true,
     },
     {
       name: "title",
@@ -54,4 +55,20 @@ export default {
       type: "string",
     },
   ],
-};
+  // orderings: [
+  //   {
+  //     title: 'projectIndex, Low',
+  //     name: 'projectIndexDesc',
+  //     by: [
+  //       {field: 'projectIndex', direction: 'desc'}
+  //     ]
+  //   },
+  //   {
+  //     title: 'projectIndex, High',
+  //     name: 'projectIndexAsc',
+  //     by: [
+  //       {field: 'projectIndex', direction: 'asc'}
+  //     ]
+  //   },
+  // ]
+}
