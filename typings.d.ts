@@ -28,6 +28,7 @@ export interface PageInfo extends SanityBody {
 export interface Experience extends SanityBody {
   _type: "experience";
   company: string;
+  jobIndex: "number";
   companyImage: Image;
   dateStarted: date;
   dateEnded: date;
@@ -54,6 +55,7 @@ export interface Skill extends SanityBody {
 export interface Project extends SanityBody {
   title: string;
   _type: "project";
+  projectIndex: "number";
   image: Image;
   linkToBuild: string;
   linkToGithub: string;
