@@ -39,7 +39,7 @@ export interface Experience extends SanityBody {
 }
 
 export interface Education extends SanityBody {
-  _type: "education";
+  _type: "school";
   school: string;
   schoolIndex: "number";
   degreeImage: Image;

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import EducationCard from "./EducationCard";
+import SchoolCard from "./SchoolCard";
 import { Education } from "../typings";
 
 type Props = {
@@ -21,8 +21,8 @@ function School({ educations }: Props) {
       </h3>
 
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#61DAFB]/80">
-        {educations?.map((education) => (
-          <EducationCard key={education._id} education={education} />
+        {educations?.map((school) => (
+          <SchoolCard key={school._id} school={school} />
         ))}
       </div>
     </motion.div>
