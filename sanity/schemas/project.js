@@ -41,12 +41,12 @@ export default {
     {
       name: "linkToDeployment",
       title: "LinkToDeployment",
-      type: "url",
+      type: "string",
     },
     {
       name: "linkToDemo",
       title: "LinkToDemo",
-      type: "url",
+      type: "string",
     },
   ],
 };
