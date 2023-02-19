@@ -49,6 +49,19 @@ export interface Education extends SanityBody {
   points: string[];
 }
 
+export interface Project extends SanityBody {
+  title: string;
+  _type: "project";
+  projectIndex: "number";
+  image: Image;
+  linkToBuild: string;
+  linkToGithub: string;
+  linkToDeployment: string;
+  linkToDemo: string;
+  summary: string;
+  technologies: Technology[];
+}
+
 export interface Technology extends SanityBody {
   _type: "skill";
   image: Image;
@@ -61,19 +74,6 @@ export interface Skill extends SanityBody {
   image: Image;
   progress: number;
   title: string;
-}
-
-export interface Project extends SanityBody {
-  title: string;
-  _type: "project";
-  projectIndex: "number";
-  image: Image;
-  linkToBuild: string;
-  linkToGithub: string;
-  linkToDeployment: string;
-  linkToDemo: string;
-  summary: string;
-  technologies: Technology[];
 }
 
 export interface Social extends SanityBody {
