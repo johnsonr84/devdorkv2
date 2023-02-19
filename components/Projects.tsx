@@ -38,7 +38,9 @@ function Projects({ projects }: Props) {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     src={urlFor(project?.image).url()}
-                                    className="md:mb-0 p-5 xs:mt-20 sm:mt-20 md:mt-10 lg:mt-15 xl:mt-20 flex-shrink-0 rounded md:rounded-lg xs:w-[250px] xs:h-[250px] sm:w-[300px] sm:h-[300px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] object-contain cursor-pointer"
+                                    className="md:mb-0 p-5 xs:mt-20 sm:mt-20 md:mt-10 lg:mt-15 xl:mt-20 flex-shrink-0 rounded md:rounded-lg 
+                                    xs:w-[auto] xs:h-[200px] sm:w-[auto] sm:h-[250px] md:w-[auto] md:h-[300px] lg:w-[auto] lg:h-[350px] xl:w-[auto] xl:h-[400px] 
+                                    object-contain cursor-pointer"
                                 />
                             </a>
                         </Link>

@@ -7,7 +7,6 @@ export default {
       name: "projectIndex",
       title: "ProjectIndex",
       type: "number",
-      hidden: true,
     },
     {
       name: "title",
@@ -27,12 +26,6 @@ export default {
       name: "summary",
       title: "Summary",
       type: "text",
-    },
-    {
-      name: "technologies",
-      title: "Technologies",
-      type: "array",
-      of: [{ type: "reference", to: { type: "skill" } }],
     },
     {
       name: "linkToBuild",
